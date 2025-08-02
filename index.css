@@ -1,0 +1,305 @@
+/* Base styles for all devices */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body,
+main {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Define the Regular (Normal) version of Outfit Variable Font --- */
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* --- Define the Regular (Normal) version of YoungSerif Font --- */
+@font-face {
+  font-family: "YoungSerif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ======================== */
+/* --- Global variables --- */
+/* ======================== */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --brown_800: hsl(14, 45%, 36%);
+  --rose_50: hsl(330, 100%, 98%);
+  --rose_800: hsl(332, 51%, 32%);
+  --stone_100: hsl(30, 54%, 90%);
+  --stone_150: hsl(30, 18%, 87%);
+  --stone_600: hsl(30, 10%, 34%);
+  --stone_900: hsl(24, 5%, 18%);
+}
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 1px;
+  color: var(--stone_900);
+}
+/* Weights: 400, 600, 700 */
+.font-outfit-para {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: var(--stone_600);
+}
+.font-outfit-subtitle-3 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  /* line-height: 150%; */
+  /* letter-spacing: 1px; */
+  color: var(--rose_800);
+}
+.font-young-serif {
+  font-family: "YoungSerif", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 1px;
+  color: var(--stone_900);
+}
+/* Weights: 400 */
+.font-young-serif-title {
+  font-family: "YoungSerif", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: var(--stone_900);
+}
+.font-young-serif-subtitle-2 {
+  font-family: "YoungSerif", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: normal;
+  /* line-height: 150%; */
+  /* letter-spacing: 1px; */
+  color: var(--rose_800);
+}
+
+/* ======================== */
+/* --- Main --- */
+/* ======================== */
+.content {
+  padding: 7.5rem 2rem;
+  margin: 0;
+
+  background-color: var(--stone_100);
+
+  display: flex;
+  justify-content: center;
+}
+.card {
+  padding: 0;
+  margin: 0;
+  width: 45.9375rem;
+  border-radius: 1.25rem;
+
+  background-color: var(--white);
+}
+.food-image {
+  padding: 2.5rem 2.5rem 0.625rem 2.5rem;
+  margin: 0;
+  border-radius: 0.625rem;
+}
+.food-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+}
+.food-info {
+  /* padding: 0 2.5rem 2.5rem 2.5rem; */
+  margin: 0 2.5rem 2.5rem 2.5rem;
+}
+.title {
+  padding: 0.9375rem 0;
+  margin: 0;
+}
+.desc {
+  padding: 0;
+  margin: 0;
+}
+.general-info {
+  padding: 1.5625rem;
+  margin: 1.875rem 0;
+  border-radius: 0.625rem;
+
+  background-color: var(--rose_50);
+}
+.prep-time {
+  padding: 0 0 0.125rem 0;
+  margin: 0;
+}
+.prep-info {
+  padding: 0;
+  margin: 0;
+}
+.prep-info > li {
+  padding: 0 0.9375rem;
+  margin: 0.5rem 0 0 1.375rem;
+}
+.ingredients {
+  padding: 0.3125rem 0;
+  margin: 0;
+}
+.ingre-info {
+  padding: 0;
+  margin: 1.25rem 0;
+}
+.ingre-info > li {
+  padding: 0 0.9375rem;
+  margin: 0.5rem 0 0 1.375rem;
+}
+.ingre-info > li::marker {
+  color: var(--rose_800);
+}
+hr {
+  padding: 0;
+  margin: 1.875rem 0;
+
+  border-top: 0.0625rem solid var(--stone_150);
+}
+.instructions {
+  padding: 0;
+  margin: 0 0 1.875rem 0;
+}
+.instruct-info {
+  padding: 0;
+  margin: 0;
+}
+.instruct-info > li {
+  padding: 0 0.9375rem;
+  margin: 0.5rem 0 0 1.5625rem;
+}
+.instruct-info > li::marker {
+  color: var(--rose_800);
+  font-weight: 700;
+  font-family: system-ui;
+}
+.nutrition {
+  padding: 0;
+  margin: 0;
+}
+.nutri-desc {
+  padding: 1.25rem 0;
+  margin: 0;
+}
+.nutri-table {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.nutri-table,
+.nutri-table tbody,
+.nutri-table tr,
+.nutri-table td {
+  border-collapse: collapse;
+}
+.nutri-table tr {
+  border-top: 0.0625rem solid var(--stone_150);
+}
+.nutri-table tr:nth-child(1) {
+  border-top: 0rem;
+}
+.nutri-table td {
+  padding: 0.625rem 1.875rem;
+  margin: 0;
+}
+.nutri-table tr > td:nth-child(2) {
+  color: var(--rose_800);
+  font-weight: 600;
+}
+
+/* ======================== */
+/* --- Footer --- */
+/* ======================== */
+.attribution {
+  display: none;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ======================== */
+/* --- Multi Screens --- */
+/* ======================== */
+/* Extra large devices (Large Desktops, 1960px and up) */
+@media (min-width: 1960px) {
+  html {
+    font-size: 20px;
+  }
+}
+/* Large devices (Desktops, 1440px and down) */
+@media (max-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+/* Medium devices (Tablets, 768px and down) */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+/* Small devices (Phones - Landscape, 576px and down) */
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+  .content {
+    padding: 0rem;
+  }
+  .food-image {
+    padding: 0 0 0.625rem 0;
+    border-radius: 0rem;
+  }
+  .food-image > img {
+    border-radius: 0rem;
+  }
+  .food-info {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    margin: 0;
+  }
+}
+/* Extra small devices (mobile Phones, 375px and down) */
+@media (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+}
